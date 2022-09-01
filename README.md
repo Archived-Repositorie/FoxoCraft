@@ -5,7 +5,13 @@
 <br>
 
 ## Todo:
-- [ ] Setup mod
+- [x] Setup mod
+- [ ] Add items
+- [ ] Add blocks
+- [ ] Add craftings
+- [ ] Make tools work
+- [ ] Make ores generate
+- [ ] Make blocks work
 
 ## License
 
