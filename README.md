@@ -14,6 +14,8 @@
 - [ ] Make armor work
 - [ ] Make ores generate
 - [ ] Make blocks work
+- [ ] Add mobs
+- [ ] Make mobs work
 
 ## License
 
