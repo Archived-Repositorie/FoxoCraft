@@ -1,9 +1,22 @@
-# Fabric Example Mod
+# Foxo Craft
+> ### `Port Of Cococraft`
 
-## Setup
+<br>
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+## Todo:
+- [ ] .
 
 ## License
+It's under GPL v3 license <br>
+[License](./LICENSE)
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+## Contributions
+[@JustFoxx](https://github.com/JustFoxx/) (Owner)
+
+## Compilation
+
+1. Install `git`
+2. Choose place for repository and run `git clone https://github.com/JustFoxx/FoxoCraft.git`
+3. Go to folder called `FoxoCraft` in folder of your choice
+4. Run `./gradlew`
+5. Go to `./build/libs` and here you can find binaries of mod
