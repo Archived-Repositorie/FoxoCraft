@@ -10,6 +10,7 @@
 - [ ] Add blocks
 - [ ] Add craftings
 - [ ] Make tools work
+- [ ] Make items work
 - [ ] Make ores generate
 - [ ] Make blocks work
 
