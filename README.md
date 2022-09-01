@@ -11,6 +11,7 @@
 - [ ] Add craftings
 - [ ] Make tools work
 - [ ] Make items work
+- [ ] Make armor work
 - [ ] Make ores generate
 - [ ] Make blocks work
 
