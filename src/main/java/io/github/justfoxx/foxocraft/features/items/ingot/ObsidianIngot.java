@@ -1,10 +1,8 @@
-package io.github.justfoxx.foxocraft.items;
+package io.github.justfoxx.foxocraft.features.items.ingot;
 
-import net.minecraft.item.Item;
+import io.github.justfoxx.foxocraft.features.items.BaseItem;
 import net.minecraft.util.Rarity;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
-
-import java.util.Set;
 
 public class ObsidianIngot extends BaseItem {
 

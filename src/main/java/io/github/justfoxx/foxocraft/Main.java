@@ -1,5 +1,6 @@
 package io.github.justfoxx.foxocraft;
 
+import io.github.justfoxx.foxocraft.registry.FoxoRegistry;
 import net.minecraft.util.Identifier;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
@@ -16,7 +17,7 @@ public class Main implements ModInitializer {
 	}
 	@Override
 	public void onInitialize(ModContainer mod) {
-		Register.register();
+		FoxoRegistry.register();
 		LOGGER.info("Foxes have been loaded \uD83E\uDD8A");
 	}
 }
