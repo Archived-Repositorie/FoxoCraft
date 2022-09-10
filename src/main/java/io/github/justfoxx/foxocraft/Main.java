@@ -17,6 +17,7 @@ public class Main implements ModInitializer {
 	}
 	@Override
 	public void onInitialize(ModContainer mod) {
+		Main.LOGGER.info("test2");
 		FoxoRegistry.register();
 		LOGGER.info("Foxes have been loaded \uD83E\uDD8A");
 	}

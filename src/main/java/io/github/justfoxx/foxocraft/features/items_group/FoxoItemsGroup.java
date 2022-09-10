@@ -23,6 +23,5 @@ public class FoxoItemsGroup {
 					stacks.addAll(listStacks);
 				})
 				.build();
-		Main.LOGGER.info(Arrays.deepToString(listStacks.toArray()));
 	}
 }

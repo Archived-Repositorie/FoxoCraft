@@ -1,5 +1,6 @@
 package io.github.justfoxx.foxocraft.registry;
 
+import io.github.justfoxx.foxocraft.Main;
 import io.github.justfoxx.foxocraft.features.items.BaseItem;
 import io.github.justfoxx.foxocraft.features.items_group.FoxoItemsGroup;
 import net.minecraft.item.Item;
@@ -20,6 +21,7 @@ public class FoxoRegistry {
 	public static final ArrayList<Item> items = new ArrayList<>();
 	public static final ArrayList<ItemStack> itemsStack = new ArrayList<>();
 	public static void register() {
+		Main.LOGGER.info("test1");
 		registerItem("alloy", Items.ALLOY);
 		registerItem("compressed_alloy", Items.COMPRESSED_ALLOY);
 		registerItem("extreme_alloy", Items.EXTREME_ALLOY);
@@ -43,20 +45,23 @@ public class FoxoRegistry {
 		registerItem("cocoa_powder", Items.COCOA_POWDER);
 		registerItem("diamond_stick", Items.DIAMOND_STICK);
 		registerItem("unworked_steel", Items.UNWORKED_STEEL);
+		registerItem("earth_essence", Items.EARTH_ESSENCE);
+		registerItem("fire_essence", Items.FIRE_ESSENCE);
+		registerItem("water_essence", Items.WATER_ESSENCE);
+		registerItem("wind_essence", Items.WIND_ESSENCE);
 
 		registerItem("choco_beef", Items.CHOCO_BEEF);
 		registerItem("choco_pork", Items.CHOCO_PORK);
 		registerItem("choco_steak", Items.CHOCO_STEAK);
 		registerItem("cooked_choco_pork", Items.COOKED_CHOCO_PORK);
+
 		registerItem("choco_milk", Items.CHOCO_MILK);
 		registerItem("hot_choco_milk", Items.HOT_CHOCO_MILK);
-
 		FoxoItemsGroup.create(itemsStack);
 	}
 
-	private static <T extends Item> void registerItem(String ID, T baseClass) {
-		items.add(baseClass);
-		itemsStack.add(new ItemStack(baseClass));
-		Registry.register(Registry.ITEM, id(ID), baseClass);
+	private static void registerItem(String ID, BaseItem baseClass) {
+		Registry.register(Registry.ITEM, id(ID), baseClass.getOrCreateItem());
+		itemsStack.add(new ItemStack(baseClass.getOrCreateItem()));
 	}
 }

@@ -3,20 +3,20 @@ package io.github.justfoxx.foxocraft.features.items;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.MilkBucketItem;
+import org.jetbrains.annotations.Nullable;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 
-import javax.annotation.Nullable;
+public class DrinkItem extends FoodItem {
 
-public class DrinkItem {
-	private static QuiltItemSettings settings;
-	private static void setSetting(QuiltItemSettings settings) {
-		DrinkItem.settings = settings;
+
+
+	public DrinkItem(@Nullable QuiltItemSettings settings, int hunger, float saturation, boolean meat) {
+		super(settings, hunger, saturation, meat);
+		setSettings(super.settings.maxCount(1));
 	}
-	public static Item item(@Nullable QuiltItemSettings settings, int hunger, float saturation, boolean meat) {
-		if(settings == null) settings = new QuiltItemSettings();
-		FoodComponent.Builder foodComponent = new FoodComponent.Builder().hunger(hunger).saturationModifier(saturation);
-		if(meat) foodComponent.meat();
-		setSetting(settings.food(foodComponent.build()));
-		return new MilkBucketItem(DrinkItem.settings);
+
+	@Override
+	public Item createItem() {
+		return new MilkBucketItem(super.settings);
 	}
 }
