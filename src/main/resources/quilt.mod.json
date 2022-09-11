@@ -18,7 +18,8 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "io.github.justfoxx.foxocraft.Main"
+			"init": "io.github.justfoxx.foxocraft.Main",
+			"fabric-datagen": "io.github.justfoxx.foxocraft.datagen.Main"
 		},
 		"depends": [
 			{

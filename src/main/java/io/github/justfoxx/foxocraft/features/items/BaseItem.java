@@ -1,6 +1,8 @@
 package io.github.justfoxx.foxocraft.features.items;
 
 import net.minecraft.item.Item;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 
 import javax.annotation.Nullable;
@@ -26,5 +28,12 @@ public class BaseItem {
 	public Item getOrCreateItem() {
 		if(item == null) item = createItem();
 		return item;
+	}
+
+	public Item register(Identifier id) {
+		return Registry.register(Registry.ITEM, id, getOrCreateItem());
+	}
+	public Item register(String id) {
+		return register(new Identifier(id));
 	}
 }

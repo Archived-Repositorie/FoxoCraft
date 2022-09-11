@@ -21,7 +21,6 @@ public class FoxoRegistry {
 	public static final ArrayList<Item> items = new ArrayList<>();
 	public static final ArrayList<ItemStack> itemsStack = new ArrayList<>();
 	public static void register() {
-		Main.LOGGER.info("test1");
 		registerItem("alloy", Items.ALLOY);
 		registerItem("compressed_alloy", Items.COMPRESSED_ALLOY);
 		registerItem("extreme_alloy", Items.EXTREME_ALLOY);
@@ -57,11 +56,11 @@ public class FoxoRegistry {
 
 		registerItem("choco_milk", Items.CHOCO_MILK);
 		registerItem("hot_choco_milk", Items.HOT_CHOCO_MILK);
-		FoxoItemsGroup.create(itemsStack);
 	}
 
 	private static void registerItem(String ID, BaseItem baseClass) {
-		Registry.register(Registry.ITEM, id(ID), baseClass.getOrCreateItem());
-		itemsStack.add(new ItemStack(baseClass.getOrCreateItem()));
+		var item = baseClass.register(id(ID));
+		items.add(item);
+		itemsStack.add(new ItemStack(item));
 	}
 }
