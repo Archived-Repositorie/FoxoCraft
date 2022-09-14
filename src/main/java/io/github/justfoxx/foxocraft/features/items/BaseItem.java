@@ -1,5 +1,6 @@
 package io.github.justfoxx.foxocraft.features.items;
 
+import io.github.justfoxx.foxocraft.Main;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -32,8 +33,5 @@ public class BaseItem {
 
 	public Item register(Identifier id) {
 		return Registry.register(Registry.ITEM, id, getOrCreateItem());
-	}
-	public Item register(String id) {
-		return register(new Identifier(id));
 	}
 }

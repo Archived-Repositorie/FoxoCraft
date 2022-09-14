@@ -24,10 +24,16 @@
   "item.foxocraft.diamond_stick": "Diamond Stick",
   "item.foxocraft.unworked_steel": "Unworked Steel",
 
+  "item.foxocraft.earth_essence": "Earth Essence",
+  "item.foxocraft.fire_essence": "Fire Essence",
+  "item.foxocraft.water_essence": "Water Essence",
+  "item.foxocraft.air_essence": "Air Essence",
+
   "item.foxocraft.choco_beef": "Choco Beef",
   "item.foxocraft.choco_pork": "Choco Pork",
   "item.foxocraft.choco_steak": "Choco Steak",
   "item.foxocraft.cooked_choco_pork": "Cooked Choco Pork",
+
   "item.foxocraft.choco_milk": "Choco Milk",
   "item.foxocraft.hot_choco_milk": "Hot Choco Milk"
 }

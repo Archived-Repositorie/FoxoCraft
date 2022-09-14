@@ -1,8 +1,6 @@
 package io.github.justfoxx.foxocraft.features.items;
 
-import io.github.justfoxx.foxocraft.features.items_group.FoxoItemsGroup;
 import net.minecraft.item.FoodComponent;
-import net.minecraft.item.Item;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 
 import javax.annotation.Nullable;

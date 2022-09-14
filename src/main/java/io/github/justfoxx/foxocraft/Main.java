@@ -1,9 +1,7 @@
 package io.github.justfoxx.foxocraft;
 
 import io.github.justfoxx.foxocraft.features.items_group.FoxoItemsGroup;
-import io.github.justfoxx.foxocraft.registry.Datagen;
 import io.github.justfoxx.foxocraft.registry.FoxoRegistry;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.util.Identifier;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;

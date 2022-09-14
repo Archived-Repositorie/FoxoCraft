@@ -2,18 +2,9 @@ package io.github.justfoxx.foxocraft.registry;
 
 import io.github.justfoxx.foxocraft.Main;
 import io.github.justfoxx.foxocraft.features.items.BaseItem;
-import io.github.justfoxx.foxocraft.features.items_group.FoxoItemsGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.collection.DefaultedList;
-import net.minecraft.util.registry.Registry;
-import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
-
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 import static io.github.justfoxx.foxocraft.Main.id;
 
@@ -56,11 +47,16 @@ public class FoxoRegistry {
 
 		registerItem("choco_milk", Items.CHOCO_MILK);
 		registerItem("hot_choco_milk", Items.HOT_CHOCO_MILK);
+
+		registerItem("book_of_exp", Items.BOOK_OF_EXP);
+		registerItem("book_of_healing", Items.BOOK_OF_HEALING);
+		registerItem("book_of_time", Items.BOOK_OF_TIME);
 	}
 
 	private static void registerItem(String ID, BaseItem baseClass) {
 		var item = baseClass.register(id(ID));
 		items.add(item);
 		itemsStack.add(new ItemStack(item));
+		if(item.isFood()) Main.LOGGER.info(item.getDefaultStack() +" is food");
 	}
 }

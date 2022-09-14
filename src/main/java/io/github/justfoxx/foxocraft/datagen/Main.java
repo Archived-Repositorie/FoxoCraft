@@ -7,7 +7,9 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.model.BlockStateModelGenerator;
 import net.minecraft.data.client.model.Models;
-import net.minecraft.item.Item;
+import org.quiltmc.loader.api.LanguageAdapter;
+import org.quiltmc.loader.api.LanguageAdapterException;
+import org.quiltmc.loader.api.ModContainer;
 
 public class Main implements DataGeneratorEntrypoint {
 

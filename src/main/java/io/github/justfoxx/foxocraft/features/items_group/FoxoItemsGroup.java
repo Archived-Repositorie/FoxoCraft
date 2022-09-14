@@ -4,12 +4,9 @@ import io.github.justfoxx.foxocraft.Main;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
-import net.minecraft.util.collection.DefaultedList;
 import org.quiltmc.qsl.item.group.api.QuiltItemGroup;
 
-import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
 public class FoxoItemsGroup {
 	public static void create(List<ItemStack> listStacks) {
@@ -19,9 +16,7 @@ public class FoxoItemsGroup {
 		icon.setNbt(nbt);
 		QuiltItemGroup.builder(Main.id("foxo_items_group"))
 				.icon(() -> icon)
-				.appendItems(stacks -> {
-					stacks.addAll(listStacks);
-				})
+				.appendItems(stacks -> stacks.addAll(listStacks))
 				.build();
 	}
 }
