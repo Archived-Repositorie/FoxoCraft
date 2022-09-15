@@ -1,4 +1,4 @@
-// 1.19.2	2022-09-14T18:27:52.3778817	Models
+// 1.19.2	2022-09-15T16:27:24.9529267	Models
 7638c3dea2a45f21f755c71562d14255693b4aed assets\foxocraft\models\item\coal_dust.json
 0c991ea423c61210b43682af84eac1c2b75645a3 assets\foxocraft\models\item\gold_dust.json
 cc22266b51859ae43a557709e31af004a94e33ca assets\foxocraft\models\item\wind_essence.json
@@ -14,6 +14,7 @@ db7e08698a0e58af12efd80cff34fae81d9210f2 assets\foxocraft\models\item\mixed_iron
 df07a0edca18849440a3ebaa2f43953c58b4a2ca assets\foxocraft\models\item\silver_ingot.json
 728df8792953f870011c6613155ea168bc692695 assets\foxocraft\models\item\book_of_healing.json
 09b202b1998a5f20d9c5d41a7685e4043b4957ba assets\foxocraft\models\item\book_of_exp.json
+3db300bfc967912980424f7b9910b54985434aea assets\foxocraft\blockstates\foxo_stone.json
 4155af3924d57cdc7d79289551985ff057bef388 assets\foxocraft\models\item\water_essence.json
 445d80fe43296bfe9b266c22991c049e9b2dea68 assets\foxocraft\models\item\choco_pork.json
 9a2568aeee2478ea20c94be7476bee73765e8df1 assets\foxocraft\models\item\fire_essence.json

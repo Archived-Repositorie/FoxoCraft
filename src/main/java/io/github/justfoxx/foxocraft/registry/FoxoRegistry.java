@@ -1,7 +1,9 @@
 package io.github.justfoxx.foxocraft.registry;
 
 import io.github.justfoxx.foxocraft.Main;
+import io.github.justfoxx.foxocraft.features.blocks.BaseBlock;
 import io.github.justfoxx.foxocraft.features.items.BaseItem;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import java.util.ArrayList;
@@ -11,7 +13,10 @@ import static io.github.justfoxx.foxocraft.Main.id;
 public class FoxoRegistry {
 	public static final ArrayList<Item> items = new ArrayList<>();
 	public static final ArrayList<ItemStack> itemsStack = new ArrayList<>();
-	public static void register() {
+
+	public static final ArrayList<Block> blocks = new ArrayList<>();
+
+	private static void registerItems() {
 		registerItem("alloy", Items.ALLOY);
 		registerItem("compressed_alloy", Items.COMPRESSED_ALLOY);
 		registerItem("extreme_alloy", Items.EXTREME_ALLOY);
@@ -53,10 +58,22 @@ public class FoxoRegistry {
 		registerItem("book_of_time", Items.BOOK_OF_TIME);
 	}
 
+	private static void registerBlocks() {
+		registerBlock("foxo_stone", Blocks.FOXO_STONE);
+	}
+	public static void register() {
+		registerItems();
+		registerBlocks();
+	}
+
 	private static void registerItem(String ID, BaseItem baseClass) {
 		var item = baseClass.register(id(ID));
 		items.add(item);
 		itemsStack.add(new ItemStack(item));
-		if(item.isFood()) Main.LOGGER.info(item.getDefaultStack() +" is food");
+	}
+	private static void registerBlock(String ID, BaseBlock baseClass) {
+		var block = baseClass.register(id(ID));
+		blocks.add(block);
+		//blocksStack.add(new ItemStack(block));
 	}
 }

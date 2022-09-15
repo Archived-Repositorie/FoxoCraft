@@ -17,7 +17,9 @@ public class Main implements DataGeneratorEntrypoint {
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 		fabricDataGenerator.addProvider(new FabricModelProvider(fabricDataGenerator) {
 			@Override
-			public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {}
+			public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+				FoxoRegistry.blocks.forEach(blockStateModelGenerator::registerSimpleState);
+			}
 
 			@Override
 			public void generateItemModels(ItemModelGenerator itemModelGenerator) {
