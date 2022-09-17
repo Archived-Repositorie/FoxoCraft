@@ -4,8 +4,12 @@ import io.github.justfoxx.foxocraft.Main;
 import io.github.justfoxx.foxocraft.features.blocks.BaseBlock;
 import io.github.justfoxx.foxocraft.features.items.BaseItem;
 import net.minecraft.block.Block;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
+
 import java.util.ArrayList;
 
 import static io.github.justfoxx.foxocraft.Main.id;
@@ -15,6 +19,7 @@ public class FoxoRegistry {
 	public static final ArrayList<ItemStack> itemsStack = new ArrayList<>();
 
 	public static final ArrayList<Block> blocks = new ArrayList<>();
+	public static final ArrayList<BaseBlock> blocksClass = new ArrayList<>();
 
 	private static void registerItems() {
 		registerItem("alloy", Items.ALLOY);
@@ -56,14 +61,22 @@ public class FoxoRegistry {
 		registerItem("book_of_exp", Items.BOOK_OF_EXP);
 		registerItem("book_of_healing", Items.BOOK_OF_HEALING);
 		registerItem("book_of_time", Items.BOOK_OF_TIME);
+
+
+		//registry items from blocks
+		blocksClass.forEach(block -> {
+			BaseItem item = block.createItem();
+			item.register(null);
+		});
 	}
 
 	private static void registerBlocks() {
 		registerBlock("foxo_stone", Blocks.FOXO_STONE);
 	}
 	public static void register() {
-		registerItems();
 		registerBlocks();
+		registerItems();
+		//Registry.register(Registry.ITEM, new Identifier("minecraft","water"), new BlockItem(net.minecraft.block.Blocks.WATER, new Item.Settings()));
 	}
 
 	private static void registerItem(String ID, BaseItem baseClass) {
@@ -74,6 +87,6 @@ public class FoxoRegistry {
 	private static void registerBlock(String ID, BaseBlock baseClass) {
 		var block = baseClass.register(id(ID));
 		blocks.add(block);
-		//blocksStack.add(new ItemStack(block));
+		blocksClass.add(baseClass);
 	}
 }

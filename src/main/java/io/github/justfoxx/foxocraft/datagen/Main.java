@@ -1,5 +1,6 @@
 package io.github.justfoxx.foxocraft.datagen;
 
+import io.github.justfoxx.foxocraft.features.items.BlockItem;
 import io.github.justfoxx.foxocraft.registry.FoxoRegistry;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
@@ -23,7 +24,9 @@ public class Main implements DataGeneratorEntrypoint {
 
 			@Override
 			public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-				FoxoRegistry.items.forEach(item -> itemModelGenerator.register(item, Models.GENERATED));
+				FoxoRegistry.items.forEach(item -> {
+					itemModelGenerator.register(item, Models.GENERATED);
+				});
 			}
 		});
 	}

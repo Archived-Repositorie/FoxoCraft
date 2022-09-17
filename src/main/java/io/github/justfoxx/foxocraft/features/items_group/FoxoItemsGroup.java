@@ -1,6 +1,7 @@
 package io.github.justfoxx.foxocraft.features.items_group;
 
 import io.github.justfoxx.foxocraft.Main;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
